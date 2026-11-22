@@ -1,0 +1,6 @@
+# Third & C3 — static single-page site (no build step).
+# Payload is index.html + assets/ at the repo root; Netlify serves the root as-is.
+# Mirrors the house pattern (academy-cc3po-astro/netlify.toml) minus the Astro build.
+
+[build]
+  publish = "."

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Third &amp; C3 — Fantasy Football, Coached. IDP-First.</title>
+<meta name="description" content="Third & C3: fantasy football, coached. IDP-first, straight from the film room. By C3 — playing since 2005.">
+<link rel="canonical" href="https://thirdandc3.cc3po.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Third & C3">
+<meta property="og:title" content="Third & C3 — Fantasy Football, Coached. IDP-First.">
+<meta property="og:description" content="Five teams, one guillotine blade, and the side of the ball most coverage skips. By C3, playing since 2005.">
+<meta property="og:url" content="https://thirdandc3.cc3po.com/">
+<meta property="og:image" content="https://thirdandc3.cc3po.com/assets/crest.png">
+<meta name="twitter:card" content="summary">
+<style>
+  @font-face { font-family: 'Oswald'; src: url('assets/Oswald.ttf') format('truetype'); }
+  @font-face { font-family: 'Inter'; src: url('assets/Inter.ttf') format('truetype'); }
+  @font-face { font-family: 'Yellowtail'; src: url('assets/Yellowtail.ttf') format('truetype'); }
+  :root {
+    --navy: #0a1428; --navy-2: #101f3c; --navy-3: #16294d;
+    --gold: #d9a441; --gold-soft: #e8c476;
+    --ink: #eef1f6; --muted: #9fb0c9; --line: #24365c;
+    --red: #c0392b; --teal: #1abc9c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--navy); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.55; }
+  a { color: var(--gold-soft); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px 64px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 48px 20px 36px; background: radial-gradient(ellipse at top, var(--navy-3), var(--navy) 70%); border-bottom: 3px solid var(--gold); }
+  .hero img.crest { width: 132px; height: 132px; object-fit: contain; }
+  .hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(44px, 10vw, 76px); letter-spacing: 1px; text-transform: uppercase; line-height: 1.02; margin-top: 14px; }
+  .hero h1 .amp { color: var(--gold); }
+  .hero .script { font-family: 'Yellowtail', cursive; color: var(--gold); font-size: clamp(22px, 5vw, 30px); margin-top: 6px; }
+  .hero .tagline { color: var(--ink); font-size: clamp(16px, 4vw, 20px); margin-top: 10px; }
+  .hero .byline { color: var(--muted); margin-top: 8px; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
+
+  section { margin-top: 44px; }
+  h2 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; font-size: 24px; border-bottom: 2px solid var(--line); padding-bottom: 8px; margin-bottom: 18px; }
+  h2 .accent { color: var(--gold); }
+
+  /* Latest */
+  .post { background: var(--navy-2); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .post .date { color: var(--muted); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
+  .post h3 { font-family: 'Oswald', sans-serif; font-size: 22px; margin: 6px 0 8px; line-height: 1.25; }
+  .post p { color: #cfd9ea; font-size: 15px; }
+  .post .more { display: inline-block; margin-top: 10px; font-weight: 600; text-decoration: none; }
+  .post .more:hover { text-decoration: underline; }
+  .rhythm { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+  /* Leagues */
+  .league { background: var(--navy-2); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline; }
+  .league .name { font-family: 'Oswald', sans-serif; font-size: 18px; text-transform: uppercase; letter-spacing: .5px; }
+  .league .team { color: var(--gold-soft); font-weight: 600; }
+  .league .stat { color: #cfd9ea; font-size: 15px; }
+  .chip { font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 3px 9px; border-radius: 999px; text-transform: uppercase; }
+  .chip.alive { background: rgba(26,188,156,.15); color: var(--teal); border: 1px solid var(--teal); }
+  .chip.first { background: rgba(217,164,65,.15); color: var(--gold); border: 1px solid var(--gold); }
+  .verified { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+  /* About */
+  .about p { color: #cfd9ea; font-size: 16px; margin-bottom: 12px; }
+  .trophies { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .trophy { flex: 1 1 140px; background: var(--navy-2); border: 1px solid var(--line); border-radius: 8px; padding: 14px; text-align: center; }
+  .trophy .num { font-family: 'Oswald', sans-serif; font-size: 30px; color: var(--gold); }
+  .trophy .lbl { color: var(--muted); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+
+  /* Promo + links */
+  .promo { background: linear-gradient(135deg, var(--navy-3), var(--navy-2)); border: 1px solid var(--gold); border-radius: 8px; padding: 20px; }
+  .promo h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-size: 19px; }
+  .promo p { color: #cfd9ea; font-size: 15px; margin-top: 8px; }
+  .promo .code { color: var(--gold); font-weight: 700; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .links a { flex: 1 1 180px; text-align: center; background: var(--navy-2); border: 1px solid var(--line); border-radius: 8px; padding: 14px; text-decoration: none; font-weight: 600; color: var(--ink); }
+  .links a:hover { border-color: var(--gold); color: var(--gold-soft); }
+
+  footer { margin-top: 56px; border-top: 2px solid var(--line); padding-top: 18px; color: var(--muted); font-size: 13px; text-align: center; }
+  footer .script { font-family: 'Yellowtail', cursive; color: var(--gold); font-size: 20px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="crest" src="assets/crest.png" alt="Third &amp; C3 crest">
+  <h1>Third <span class="amp">&amp;</span> C3</h1>
+  <div class="script">Fantasy football, coached.</div>
+  <p class="tagline">IDP-first, straight from the film room.</p>
+  <p class="byline">By C3 · Est. 2005</p>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2>Latest from <span class="accent">the desk</span></h2>
+
+    <article class="post">
+      <div class="date">Thursday · November 19, 2026</div>
+      <h3>Week 11 Thursday: My Guillotine Team Plays Itself</h3>
+      <p>Three of my ten guillotine starters are in the same game tonight, and two of them are trying to beat the third. That's not a schedule quirk. In a six-team guillotine, that's the whole leg standing on one Thursday night in Houston.</p>
+      <a class="more" href="https://muse.ai/s/fantasy-football-blog-jm73agxmxtz7j/IpqHjO9YXTPfVDvyCOTx0cn2gDU8u5aYsrSHagjuNWI">Read it on the blog →</a>
+    </article>
+
+    <article class="post">
+      <div class="date">Saturday · November 14, 2026 · Edition No. 1</div>
+      <h3>9–0 and Still Talking</h3>
+      <p>The column is called Just Lost to Carlos for a reason — somebody in this league is about to put the 1 in 9–1. It isn't going to be me.</p>
+      <a class="more" href="https://muse.ai/s/fantasy-football-blog-jm73agxmxtz7j/IpqHjO9YXTPfVDvyCOTx0cn2gDU8u5aYsrSHagjuNWI">Read Edition No. 1 →</a>
+    </article>
+
+    <p class="rhythm">The rhythm: Monday Fallout · Wednesday IDP Waiver Wire · Thursday Injury + TNF · Sunday Set Your Lineup — and the flagship column, <strong>Just Lost to Carlos</strong>, every Tuesday.</p>
+  </section>
+
+  <section>
+    <h2>The <span class="accent">leagues</span></h2>
+
+    <div class="league">
+      <span class="name">Guillotine for the Gs</span> <span class="chip alive">Alive</span>
+      <span class="team">DGreatestofAll</span>
+      <span class="stat">6 of 16 teams left · season points leader at 1,607.32 · Leg 11 in progress</span>
+    </div>
+
+    <div class="league">
+      <span class="name">Fantasy Turf War</span> <span class="chip first">#1 Overall</span>
+      <span class="team">CC3PO · GOATs Division</span>
+      <span class="stat">10–0 · 11 trophies</span>
+    </div>
+
+    <div class="league">
+      <span class="name">The IDP Elite · Yahoo</span> <span class="chip first">1st Place</span>
+      <span class="team">Third &amp; C3</span>
+      <span class="stat">16-4-0</span>
+    </div>
+
+    <div class="league">
+      <span class="name">Tinez League · Yahoo</span>
+      <span class="team">Third &amp; C3</span>
+      <span class="stat">8-12-0</span>
+    </div>
+
+    <div class="league">
+      <span class="name">The Office League · Yahoo</span>
+      <span class="team">Third &amp; C3</span>
+      <span class="stat">6-4-0 · 4th place</span>
+    </div>
+
+    <p class="verified">Sleeper verified November 21, 2026 · Yahoo and Turf War verified November 17, 2026. Records update as the desk verifies them — never before.</p>
+  </section>
+
+  <section class="about">
+    <h2>About <span class="accent">C3</span></h2>
+    <p>In sports circles, he's C3 — Carlos Cabrales III, a name his players gave him in his coaching days. He's been playing fantasy football since 2005, and he plays it the way he coached: watch the film, trust the snaps, and never chase last week's points.</p>
+    <p>Third &amp; C3 is his desk: five teams, one guillotine blade, and the side of the ball most fantasy coverage skips — individual defensive players. Linebackers with the green dot. Safeties who tackle like it. That's the whole thesis.</p>
+    <div class="trophies">
+      <div class="trophy"><div class="num">2005</div><div class="lbl">Playing since</div></div>
+      <div class="trophy"><div class="num">558</div><div class="lbl">Football wins</div></div>
+      <div class="trophy"><div class="num">27</div><div class="lbl">Football trophies</div></div>
+      <div class="trophy"><div class="num">8</div><div class="lbl">Championships</div></div>
+    </div>
+    <p class="verified">Yahoo profile: Platinum level, Diamond highest rank · all sports: 845 wins, 36 trophies, 13 championships.</p>
+  </section>
+
+  <section>
+    <h2>Race for <span class="accent">America's Favorite Team</span></h2>
+    <div class="promo">
+      <h3>🏆 Gravy Games — Fantasy Turf War</h3>
+      <p>CC3PO is in the race for America's Favorite Team. Back the team and enter the daily drawings — free to enter, no purchase necessary, US 18+ (excl. RI); official rules on the entry page. Use code <span class="code">CARLOS</span> for 2 bonus entries. Entries run through the December 1 finale.</p>
+      <div class="links">
+        <a href="https://fantasyturfwar.com/contest?partner=carlos">Enter at Fantasy Turf War →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Follow <span class="accent">the desk</span></h2>
+    <div class="links">
+      <a href="https://muse.ai/s/fantasy-football-blog-jm73agxmxtz7j/IpqHjO9YXTPfVDvyCOTx0cn2gDU8u5aYsrSHagjuNWI">📖 The Blog</a>
+      <a href="https://www.instagram.com/carloscbrls">📸 Instagram — @carloscbrls</a>
+      <a href="https://www.facebook.com/carloscbrls">👍 Facebook</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="script">Third &amp; C3</div>
+    <p>Fantasy football, coached. IDP-first, straight from the film room.<br>© 2026 C3 · A CC3PO desk</p>
+  </footer>
+
+</div>
+</body>
+</html>

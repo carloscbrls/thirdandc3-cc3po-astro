@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thirdandc3.cc3po.com/sitemap.xml

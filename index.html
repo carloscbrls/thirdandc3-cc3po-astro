@@ -78,9 +78,17 @@
 
   footer { margin-top: 56px; border-top: 2px solid var(--line); padding-top: 18px; color: var(--muted); font-size: 13px; text-align: center; }
   footer .script { font-family: 'Yellowtail', cursive; color: var(--gold); font-size: 20px; }
+
+  /* Skip link + section nav */
+  .skip-link { position: absolute; top: -100%; left: 0; background: var(--gold); color: #0a1428; padding: 8px 16px; z-index: 10000; font-weight: 700; font-size: 14px; text-decoration: none; }
+  .skip-link:focus { top: 0; }
+  .site-nav { display: flex; flex-wrap: wrap; gap: 4px 22px; justify-content: center; padding: 14px 20px 0; }
+  .site-nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
+  .site-nav a:hover { color: var(--gold-soft); }
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="hero">
   <img class="crest" src="assets/crest.png" alt="Third &amp; C3 crest">
@@ -88,11 +96,19 @@
   <div class="script">Fantasy football, coached.</div>
   <p class="tagline">IDP-first, straight from the film room.</p>
   <p class="byline">By C3 · Est. 2005</p>
+  <nav class="site-nav" aria-label="Sections">
+    <a href="#latest">Latest</a>
+    <a href="#leagues">Leagues</a>
+    <a href="#about">About C3</a>
+    <a href="#race">The Race</a>
+    <a href="#follow">Follow</a>
+  </nav>
 </header>
 
+<main id="main-content">
 <div class="wrap">
 
-  <section>
+  <section id="latest">
     <h2>Latest from <span class="accent">the desk</span></h2>
 
     <article class="post">
@@ -112,7 +128,7 @@
     <p class="rhythm">The rhythm: Monday Fallout · Wednesday IDP Waiver Wire · Thursday Injury + TNF · Sunday Set Your Lineup — and the flagship column, <strong>Just Lost to Carlos</strong>, every Tuesday.</p>
   </section>
 
-  <section>
+  <section id="leagues">
     <h2>The <span class="accent">leagues</span></h2>
 
     <div class="league">
@@ -148,7 +164,7 @@
     <p class="verified">Sleeper verified November 21, 2026 · Yahoo and Turf War verified November 17, 2026. Records update as the desk verifies them — never before.</p>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <h2>About <span class="accent">C3</span></h2>
     <p>In sports circles, he's C3 — Carlos Cabrales III, a name his players gave him in his coaching days. He's been playing fantasy football since 2005, and he plays it the way he coached: watch the film, trust the snaps, and never chase last week's points.</p>
     <p>Third &amp; C3 is his desk: five teams, one guillotine blade, and the side of the ball most fantasy coverage skips — individual defensive players. Linebackers with the green dot. Safeties who tackle like it. That's the whole thesis.</p>
@@ -161,7 +177,7 @@
     <p class="verified">Yahoo profile: Platinum level, Diamond highest rank · all sports: 845 wins, 36 trophies, 13 championships.</p>
   </section>
 
-  <section>
+  <section id="race">
     <h2>Race for <span class="accent">America's Favorite Team</span></h2>
     <div class="promo">
       <h3>🏆 Gravy Games — Fantasy Turf War</h3>
@@ -172,7 +188,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="follow">
     <h2>Follow <span class="accent">the desk</span></h2>
     <div class="links">
       <a href="https://muse.ai/s/fantasy-football-blog-jm73agxmxtz7j/IpqHjO9YXTPfVDvyCOTx0cn2gDU8u5aYsrSHagjuNWI">📖 The Blog</a>
@@ -183,9 +199,10 @@
 
   <footer>
     <div class="script">Third &amp; C3</div>
-    <p>Fantasy football, coached. IDP-first, straight from the film room.<br>© 2026 C3 · A CC3PO desk</p>
+    <p>Fantasy football, coached. IDP-first, straight from the film room.<br>© 2026 C3 · A CC3PO desk<br>Third &amp; C3 is published by <a href="https://cc3po.com">CC3PO</a> — Lathrop, California.</p>
   </footer>
 
 </div>
+</main>
 </body>
 </html>
